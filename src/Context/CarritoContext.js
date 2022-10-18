@@ -26,16 +26,17 @@ export const CarritoContextProvider = ({ children }) => {
         if (findPizza.length > 0) {
             findPizza[0].cantidad += 1;
             const newCheckout = product.filter((product) => product.id !== id);
-
             setProduct([...newCheckout, findPizza[0]]);
         }
+        
+        
     };
 
 
 
     return (
         <CarritoContext.Provider
-            value={{ addItemToCart, product }}
+            value={{ addItemToCart, product, setCheckout }}
         >
             {children}
         </CarritoContext.Provider>

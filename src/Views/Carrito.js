@@ -4,7 +4,7 @@ import { CarritoContext } from "../Context/CarritoContext";
 
 import '../Styles/carrito.css'
 
-const Checkout = () => {
+const Carrito = () => {
     const { product } = useContext(CarritoContext);
 
     return (
@@ -31,4 +31,4 @@ const Checkout = () => {
             );
 };
 
-            export default Checkout;
+            export default Carrito;
