@@ -1,23 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { AppPizzaContextProvider} from './Context/AppPizzaContext';
+import { CarritoContextProvider } from './Context/CarritoContext'
+import { Route, Routes, BrowserRouter } from 'react-router-dom';
 
-function App() {
+
+import Home from './Views/Home';
+import Detalles from './Views/Detalles';
+import Carrito from './Views/Carrito';
+import Navbar from './Components/Navbar';
+import Banner from './Components/Banner';
+
+
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <AppPizzaContextProvider>
+        <CarritoContextProvider >
+          <BrowserRouter>
+            <Navbar />
+            <Banner/>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/pizza/:id" element={<Detalles />} />
+              <Route path="/carrito" element={<Carrito />} />
+            </Routes>
+          </BrowserRouter>
+        </CarritoContextProvider>
+      </AppPizzaContextProvider>
     </div>
   );
 }

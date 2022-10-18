@@ -1,0 +1,23 @@
+.cards{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    
+}
+
+.img{
+    width: 300px;
+
+
+}
+
+.card{
+    gap: 10px;
+    border: 2px solid orange;
+    border-radius: 0,5rem;
+    margin: 50px;
+    align-items: center;
+    
+
+}
