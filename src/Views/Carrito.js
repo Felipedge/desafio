@@ -9,7 +9,7 @@ const Checkout = () => {
 
     return (
         <>
-            <h1 className="texto">Detalles del pedido:</h1>
+            <h1 className="titulo">Detalles del pedido:</h1>
             <div className="container">
                 {product.map((products, index) => (
                     <div className="productoscarro" key={index}>

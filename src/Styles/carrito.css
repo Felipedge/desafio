@@ -18,3 +18,9 @@
     margin: 30px;
 
 }
+
+.titulo{
+    text-align: center;
+    font-family: 'Bitter', serif;
+    margin-top: 10px;
+}
